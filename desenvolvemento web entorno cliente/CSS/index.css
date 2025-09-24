@@ -1,0 +1,15 @@
+input{
+
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+
+}
+
+form{
+
+    max-width: 500px;
+    margin: 0 auto;
+
+}

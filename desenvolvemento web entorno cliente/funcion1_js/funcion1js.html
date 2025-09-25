@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32) + " ºC";
+        }
+        document.write(toCelsius + "<br />"); // escribe por pantalla toda la función
+        document.write(toCelsius(60) + "<br />"); // ejecuta la función y muestra el resultado
+        document.write(toCelsius() + "<br />"); // pone que no puede aplicar porque no se introdujo ningún valor
+        document.write(toCelsius("hola como esta?") + "<br />"); // da error porque no hay valor numérico
+        document.write(toCelsius("60") + "<br />"); // pasa el string a int y hace la operación
+    </script>
+</body>
+
+</html>

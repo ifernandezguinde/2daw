@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        var x; document.write(x + " ");
+        x = 5; document.write(x + " ");
+        x = "hola"; document.write(x + "<br />");
+        var cadena = "today it's sunny";
+        document.write(cadena + "<br />");
+        var x = 1e5;
+        var y = 23e-5;
+        document.write("x = " + x + "-" + " y = " + y + "<br />");
+        document.write((x > y) + "<br />");
+        var coches = ["seat", "audi", "bmw"];
+        document.write(coches[2] + "<br />");
+        var personaObj = {
+            nombre: "Pepe",
+            apellido: "Perez",
+            edad: 25
+        };
+        document.write(personaObj.nombre + " " + personaObj.edad + "<br />");
+        document.write(typeof (personaObj.nombre) + "<br />");
+        document.write(typeof (personaObj) + "<br>");
+        Luis = Object.create(personaObj); // creamos un objeto persona con id Luis para poder invocar sus características
+        Luis.nombre = "Luis";
+        Luis.edad = 18;
+        document.write(personaObj.nombre + " " + personaObj.edad + "<br />");
+        document.write(typeof (personaObj.nombre) + "<br />");
+
+        document.write(Luis.nombre + " " + Luis.edad + "<br />");
+        document.write(typeof (Luis.nombre) + "<br />");
+
+    </script>
+</body>
+
+</html>

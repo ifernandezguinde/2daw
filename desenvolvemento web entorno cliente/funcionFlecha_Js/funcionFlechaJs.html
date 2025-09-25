@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+
+        // Funcion tradicional
+        function hola() {
+            return "hola1";
+        }
+        document.write(hola() + "<br />");
+
+
+        // Funcion Anonima
+        var hola;
+        hola = function () {
+            return "hola2";
+        };
+        document.write(hola());
+
+
+        // Funciones flecha
+        ola = () => { return "hola3"; }
+        document.write("<br />" + hola());
+
+        
+        hola = () => "hola4";
+        document.write("<br />" + hola());
+
+
+        var nombre = "Pepe";
+        saludar = saludo => saludo + nombre;
+        document.write("<br />" + saludar("Hola"));
+
+
+        sumar = (x, y) => x + y;
+        document.write("<br />" + sumar(6, 10));
+
+        // funcion flecha motivo del uso obligatorio de return
+        multiplicar = (x, y) => {
+            document.write("<br /> Resultado:");
+                return x * y;
+        }
+        document.write("<br />" + multiplicar(2, 6));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        // asingacion de una funcion anonima a una variable
+        let f = function (a, b) {
+            return a + b
+        };
+        document.write(f(3, 1));
+        // ejecucion de una funcion sin ser invocada
+        (function () {a = 5; document.write("<br />" + a ** 2)})();
+        // funciones anónimas con parámetros
+        x = 5;
+        y = 10;
+        // encapsulación de variables
+        z = (function (x, y) { return x + y }(1, 2));
+        document.write("<br />" + z);
+        document.write("<br />" + eval(x + y) + "<br>");
+        var cadena1 = "Hola";
+        var cadena2 = " y adios";
+        (function (str1, str2) {document.write(str1 + str2);})(cadena1, cadena2);
+    </script>
+</body>
+
+</html>

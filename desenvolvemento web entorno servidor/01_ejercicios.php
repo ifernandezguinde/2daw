@@ -114,15 +114,52 @@
                 } else {
                     $frecuencia[$word] = 1;
                 }
+
+                // o mismo pero cunha ternaria
+                // $frecuencia[$word] = (isset($frecuencia[$word])) ? $frecuencia[$word] +1 : 1;
             }
 
         return $frecuencia;
         
     }
 
-    print_r(wordFrequency("ola OLA que tal que tal"));
+    print_r(wordFrequency("ola OLA que tal tal tal"));
     echo "\n";
     
+
+    /* Crea unha función que reciba múltiples strings e devolva o máis largo
+    */
+
+    function longestString(string ...$strings): string{
+        $maxString = "";
+        foreach($strings as $s){
+            if(strlen($s) > strlen($maxString)){
+                $maxString = $s;
+            }
+        }
+        return $maxString;
+    }
+
+
+    echo longestString("ola", "ola que tal", "ola que tal tal");
+
+
+
+    /* Crea unha función que imite o comportamento de array_diff.
+    */
+
+    function customArrayDiff(array $a, array $b): array {
+        $output = [];
+        foreach($a as $valor){
+            if(!in_array($valor, $b)){
+                $output[] = $valor;
+            }
+        }
+        return $output;
+        
+    }
+
+    print_r(customarrayDiff([1,2,3,4],[1,2,3]));
 
 
 ?>

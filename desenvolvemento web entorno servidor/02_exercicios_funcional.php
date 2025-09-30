@@ -203,11 +203,101 @@
         return array_reduce(
             $palabras,
             fn($max, $palabra) => strlen($palabra) > Strlen($max) ? $palabra : $max,
-            0
+            ""
         );
     }
 
 
     echo "EJERCICIO 10 \n";
     echo palabraMaisLarga(["sol", "estrellas", "galaxia", "universo"]) . "\n";
+
+
+
+    /*
+        Exercicio 11: Dado un array de palabras, devolve un array cas palabras ordenadas
+        por lonxitude de menor a mayor.
+        (usando usort con función anónima + array_values)
+    */
+
+    function ordenarPorLongitud(array $palabras): array{
+        usort(
+            $palabras, 
+            fn($pal1, $pal2) => strlen($pal1) > strlen($pal2) ? 1 : -1
+        );
+        return array_values($palabras);
+    }
+
+    echo "EJERCICIO 11 \n";
+    print_r(ordenarPorLongitud(["php", "programación", "map", "filter", "reduce"]));
+
+
+    /*
+        Exercicio 12: Dado un array de números, devolve un array cos cadrados
+        dos números positivos e descarta os negativos
+    */
+
+
+    function cuadradosPositivos(array $numeros): array{
+        $positivos = array_filter(
+            $numeros,
+            fn($n) => $n >= 0
+        );
+        return array_map(
+            fn($n) => $n * $n,
+            $positivos);
+    }
+
+    echo "EJERCICIO 12 \n";
+    print_r(cuadradosPositivos([-3, -1, 0, 2, 4]));
+
+
+    /*
+        Exercicio 13: Dado un array de frases, devolve a suma de caracteres
+        (ignorando espazos).
+    */
+
+    function totalCaracteresSinEspacios(array $frases): int{
+        return array_reduce(
+            $frases,
+            fn($acc, $frase) => $acc + strlen(str_replace(" ", "", $frase)),
+            0
+        );
+    }
+
+    echo "\nEJERCICIO 13 \n";
+    echo totalCaracteresSinEspacios([
+        "Hola mundo", 
+        "php es genial", 
+        "programacion funcional"
+    ]);
+
+
+    /*
+        Exercicio 14: Dada unha lista de estudiantes con nombre e notas (array de enteiros),
+        devolve un array asociativo co nombre e a sua nota promedio.
+    */
+
+
+    function promediosEstudiantes(array $estudiantes): array{
+        $promedios =[];
+        foreach($estudiantes as $est){
+            $suma = array_reduce(
+                $est["notas"],
+                 fn($acc, $n) => $acc + $n, 0
+                );
+            $promedios[$est["nome"]] = $suma / count($est["notas"]);
+        };
+        return array_map (
+            fn($n) => round($n, 2),
+            $promedios
+        );
+    }
+
+    echo "\nEJERCICIO 14 \n";
+    $clase =[
+        ["nome" => "Ana", "notas" => [7, 8, 9]],
+        ["nome" => "Luis", "notas" => [5, 6, 7]],
+        ["nome" => "Marta", "notas" => [9, 9, 10]],
+    ];
+    print_r(promediosEstudiantes($clase));
 ?>

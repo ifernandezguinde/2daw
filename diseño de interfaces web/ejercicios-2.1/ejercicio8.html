@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario HTML5 ejercicio 8</title>
+   
+</head>
+<body>
+    <form action="guardar" method="post">
+        <div style="margin-bottom: 2em;">
+            <!-- parte a -->
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="">Seleccione...</option>
+                <option value="es">España</option>
+                <option value="mx">México</option>
+                <option value="ar">Argentina</option>
+            </select>
+        </div>
+
+        <div style="margin-bottom: 2em;">
+            <!-- parte b -->
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" name="comentario" rows="4"></textarea>
+        </div>
+
+        <div style="margin-bottom: 2em;">
+            <!-- parte c -->
+            <!-- i -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+
+        <div style="margin-bottom: 2em;">
+            <!-- ii -->
+            <button type="button" onclick="alert('Botón presionado')">Botón</button>
+        </div>     
+
+        <div style="margin-bottom: 2em;">
+            <!-- iii -->        
+            <label>
+                <input type="checkbox" name="acepto" value="si"> Acepto los términos y condiciones
+            </label>
+        </div>
+
+        <div style="margin-bottom: 2em;">
+            <!-- iV -->
+            <label>Género:</label>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="femenino" name="genero" value="femenino" >
+            <label for="femenino">Femenino</label>
+        </div>
+
+        <div style="margin-bottom: 2em;">
+            <!-- V -->
+            <label for="archivo">Subir archivo:</label>
+            <input type="file" id="archivo" name="archivo">
+        </div>
+
+        <div style="margin-bottom: 2em;">
+            <!-- Vi -->
+            <label for="color">Color favorito:</label>
+            <input list="colores" id="color" name="color">
+            <datalist id="colores">
+                <option value="Rojo">
+                <option value="Verde">
+                <option value="Azul">
+                <option value="Amarillo">
+            </datalist>
+        </div>
+
+        <!-- parte d -->
+
+        <div style="margin-bottom: 2em;">
+            <!-- required -->
+            <label for="email">Correo electrónico:</label>
+            <input type="mail" id="email" placeholder="introduce tu email" required>
+        </div>
+
+        <div style="margin-bottom: 2em;">
+            <!-- disabled -->
+             <label>
+                <input type="checkbox" name="pro" value="si" disabled> pasar a versión pro
+             </label>
+        </div>
+
+        <div  style="margin-bottom: 2em;">
+            <!-- V -->
+            <button type="submit">Enviar formulario</button>
+        </div>
+
+    </form>
+</body>
+</html>

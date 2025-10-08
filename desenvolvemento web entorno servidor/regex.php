@@ -161,13 +161,90 @@ echo "\n";
 */
 
 function ejercicio10() {
-    $pass = ["abc123", "Abc123.$"];
+    $pass = ["abc123", "Abc123%$"];
     foreach($pass as $p){
         echo preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,}$/", $p) ? "$p é valido \n" : "$p NON é valido \n";
     }
 }
 
 ejercicio10();
+echo "\n";
+
+
+/*
+    Extraer hashtags de un texto
+*/
+
+function ejercicio11() {
+    $text = "Me gusta #PHP y #regex";
+        preg_match_all("/#(\w+)/", $text, $matches);
+        print_r($matches[1]);
+}
+
+ejercicio11();
+echo "\n";
+
+
+/*
+    Extraer direccions IP de un texto
+*/
+
+function ejercicio12() {
+    $text = "Servidor 192.168.1.1 conectado, backup en 10.0.0.5";
+    preg_match_all("/\b\d{1,3}(?:\.\d{1,3}){3}\b/", $text, $matches);
+    print_r($matches);
+}
+
+ejercicio12();
+echo "\n";
+
+
+/*
+    Validar si unha URL e correcta
+*/
+
+function ejercicio13() {
+    $urls = ["https://www.google.com","http://www.google.com","ftp://servidor.net","malurl","https://www. espacio.com"];
+    foreach($urls as $url) {
+        echo preg_match("/^(https?|ftp):\/\/[^\s]+$/", $url) ? "'$url' é valido \n" : "'$url' NON é valido \n";
+    }
+}
+
+ejercicio13();
+echo "\n";
+
+
+/*
+    Extraer nombres de usuario en correos
+*/
+
+function ejercicio14() {
+    $emails = ["juan@mail.com", "ana@test.org"];
+    foreach($emails as $e) {
+        preg_match("/^([^@]+)/", $e, $matches);
+        echo $matches[0] . "\n";
+    }
+}
+
+ejercicio14();
+echo "\n";
+
+
+/*
+    Extraer o dominio (sin a @) de todos os correos dunha lista separada por comas e tamén os usuarios
+    Ejemplo: "ana@mail.com, juan@empresa.es, user@dominio.net" -> ["mail.com", "empresa.es", "dominio.net"]
+*/
+
+function ejercicio15() {
+    $emails = "ana@mail.com, juan@empresa.es, user@dominio.net";
+    preg_match_all("/([\w.-]+)@([\w.-]+\.[A-z]{2,})/", $emails, $matches);
+    echo "Dominios:\n";
+    print_r($matches[2]);
+    echo "Usuarios:\n";
+    print_r($matches[1]);
+}
+
+ejercicio15();
 echo "\n";
 
 ?>

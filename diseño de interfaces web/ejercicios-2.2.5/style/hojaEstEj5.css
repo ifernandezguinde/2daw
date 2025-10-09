@@ -1,0 +1,16 @@
+main {
+    background-color: green;
+    opacity: 0.4;
+}
+
+.container {
+    width: 350px;
+    height: 350px;
+}
+
+.column {
+    background-color: white;
+    border: black;
+    width: 100px;
+    height: 300px;
+}

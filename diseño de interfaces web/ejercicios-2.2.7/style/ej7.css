@@ -1,0 +1,18 @@
+p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+img, p {
+    display: block;
+    margin-left: 0;
+}
+
+@media (screen) {
+    img {
+        display: block;
+        margin-left: 0 auto;
+    }
+}
+
+

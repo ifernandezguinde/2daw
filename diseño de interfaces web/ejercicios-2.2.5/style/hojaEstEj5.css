@@ -1,16 +1,27 @@
-main {
-    background-color: green;
-    opacity: 0.4;
+body {
+    background-color: rgba(0, 128, 0, 0.4); /* Verde con 40% de transparencia */
+    margin: 0; /* elimina el margin por defecto */
+    padding: 0; /* elimina el padding por defecto */
+    height: 100vh; /* altura total de la ventana */
 }
 
 .container {
-    width: 350px;
-    height: 350px;
+  display: flex;
+  justify-content: center; /* centra las columnas horizontalmente */
+  align-items: stretch; /* hace que todas las columnas tengan la misma altura */
+  width: 100%; /* ocupa todo el ancho disponible */
+  height: 100vh; /* ocupa toda la altura visible de la página */
+  gap: 10px; /* espacio entre columnas */
+  box-sizing: border-box; /* incluye el padding y el borde en el tamaño total */
+  padding: 70px; /* espacio alrededor del contenedor */
 }
 
 .column {
-    background-color: white;
-    border: black;
-    width: 100px;
-    height: 300px;
+  background-color: white; /* Color de fondo blanco */
+  border: 1px solid black; /* borde negro */
+  flex: 1; /* cada columna ocupa el mismo ancho */
+  display: flex; /* para centrar el texto */
+  align-items: center; /* centra el texto verticalmente */
+  justify-content: center; /* centra el texto horizontalmente */
+  box-sizing: border-box; /* incluye el borde en el tamaño total */
 }

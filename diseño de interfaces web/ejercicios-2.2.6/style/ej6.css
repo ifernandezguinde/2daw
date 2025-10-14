@@ -6,12 +6,13 @@ p {
 img, p {
     display: block;
     margin-left: 0;
+    text-align: left;
 }
 
 @media (screen) {
     img {
         display: block;
-        margin-left: 0 auto;
+        margin: auto;
     }
 }
 

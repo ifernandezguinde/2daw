@@ -10,7 +10,7 @@ img, p {
 }
 
 @media (screen) {
-    img {
+    .img {
         display: block;
         margin: auto;
     }

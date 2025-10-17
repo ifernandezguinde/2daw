@@ -1,0 +1,27 @@
+a[title] {
+    color: blue;
+}
+
+a[href="https://ejemplo2.com"] {
+    color: green;
+}
+
+a[class~="link"] {
+    color: grey;
+}
+
+a[class|="caso"] {
+    color: red;
+}
+
+a[href$=".org"] {
+    color: purple;
+}
+
+a[href^="#"] {
+    color: orange;
+}
+
+a[href*="caso"] {
+    color: black;
+}

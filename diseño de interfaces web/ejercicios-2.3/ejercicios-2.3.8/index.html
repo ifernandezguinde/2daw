@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            a:link {
+                color: blue;
+            }
+
+            a:visited {
+                color: red;
+            }
+
+            a:hover {
+                color: green;
+            }
+
+            a:active {
+                color: black;
+            }
+
+
+
+
+            #comentario:focus {
+                background-color: yellow;
+            }
+
+
+
+
+            p:lang(en) {
+                color: red;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <a href="https://es.wikipedia.org/wiki/Wikipedia:Portada" target="_blank">link</a>
+        </div>
+
+        <div>
+            <form action="guardar" method="post">
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="4"></textarea>
+            </form>
+        </div>
+
+        <div>
+            <p lang="es">parrafo en español</p>
+            <p lang="en">paragraph in english</p>
+        </div>
+
+    </body>
+</html>

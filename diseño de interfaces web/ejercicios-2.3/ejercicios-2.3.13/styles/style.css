@@ -1,0 +1,28 @@
+a:link {
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: black;
+    font-weight: bold;
+}
+
+li {
+    font-style: italic;
+}
+
+.impar {
+    color: black;
+    text-decoration: underline;
+}
+
+.par {
+    color: gray;
+    text-decoration: none;
+}

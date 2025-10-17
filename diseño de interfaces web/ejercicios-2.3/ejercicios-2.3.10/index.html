@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo :in-range y :out-of-range</title>
+    <style>
+        /* Campo dentro del rango */
+        input:in-range {
+            border: 2px solid green;
+        }
+
+        /* Campo fuera del rango */
+        input:out-of-range {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Introduce un número entre 1 y 10:</h2>
+    <input type="number" min="1" max="10" placeholder="1-10">
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudoclases avanzadas</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+    <h1>Pseudoclases avanzadas</h1>
+
+    <!-- :first-child y :last-child -->
+    <div class="caso1-2">
+        <p>Primer párrafo</p>
+        <p>Segundo párrafo</p>
+        <p>Tercer párrafo</p>
+    </div>
+
+    <!-- :first-of-type, :last-of-type, :only-of-type -->
+    <div class="caso3-4-5">
+        <h2>Primer título</h2>
+        <h2>Segundo título</h2>
+        <p>Párrafo 1</p>
+        <h2>Último título</h2>
+    </div>
+
+    <!-- :only-child -->
+    <div class="caso6">
+        <p>Soy hijo único</p>
+    </div>
+
+    <!-- :empty -->
+    <div class="caso7">
+        <p>   </p>
+    </div>
+
+    <!-- :nth-child(n), :nth-last-child(n), :nth-of-type(n) y :nth-last-of-type(n) -->
+    <ol class="caso8-9-10-11">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+        <li>Elemento 6</li>
+        <li>Elemento 7</li>
+        <li>Elemento 8</li>
+        <li>Elemento 9</li>
+    </ol>
+
+    <!-- :not(selector) -->
+     <div class="caso12">
+        <p>Párrafo 1</p>
+        <p class="resaltado">Párrafo 2 con not</p>
+        <p>párrafo 3</p>
+    </div>
+
+    <!-- :root -->
+     <div class="caso13">
+        <p class="variable">Este texto usa una variable definida en :root</p>
+    </div>
+
+    <!-- :enabled, :disabled, :checked -->
+    <form class="caso14-15-16">
+        <input type="text" placeholder="Campo habilitado"><br>
+        <input type="text" placeholder="Campo deshabilitado" disabled><br>
+        <label><input type="checkbox" checked> Marcado</label><br>
+        <label><input type="checkbox"> Sin marcar</label>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+/* :first-child Selecciona el primer hijo dentro de su elemento padre */
+.caso1-2 p:first-child {
+  color: green;
+}
+
+/* :last-child Selecciona el último hijo dentro de su elemento padre */
+.caso1-2 p:last-child {
+  color: red;
+}
+
+/* :first-of-type Selecciona el primer elemento de su tipo dentro del padre */
+.caso3-4-5 h2:first-of-type {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* :last-of-type Selecciona un elemento que es el único de su tipo dentro del padre */
+.caso3-4-5 h2:last-of-type {
+  color: orange;
+}
+
+/* :only-of-type Selecciona un elemento siepre y cuando sea el unico hijo de ese tipo, de ese padre */
+.caso3-4-5 p:only-of-type {
+  font-style: italic;
+  background-color: lightgray;
+  color: darkgreen;
+}
+
+/* :only-child Selecciona al elemento si es el hijo único de su padre */
+.caso6 p:only-child {
+    background-color: violet;
+    color: white;
+}
+

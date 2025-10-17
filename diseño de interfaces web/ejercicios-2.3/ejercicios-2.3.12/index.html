@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+            .line::first-line {
+                color: blue;
+            }
+
+            .letter::first-letter {
+                color: red;
+                font-size: 200%;
+            }
+
+            .before::before {
+                content: "Antes - ";
+                color: green;
+            }
+
+            .after::after {
+                content: " - Después";
+                color: orange;
+            }
+
+            .lista ::marker {
+                color: red;
+                font-size: 150%;
+            }
+
+            .selection::selection {
+                background: yellow;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <p class="line">párrafo para first-line</p>
+        <p class="letter">párrafo para first-letter</p>
+        <p class="before">párrafo para before</p>
+        <p class="after">párrafo para after</p>
+        <ul class="lista">
+            <li>marker1</li>
+            <li>marker2</li>
+            <li>marker3</li>
+        </ul>
+        <p class="selection">párrafo para selection</p>
+    </body>
+
+</html>

@@ -64,6 +64,34 @@
 }
 
 /* :not(selector) Selecciona cada elemento que no sea el selector que se ha indicado */
-.caso12 p:not("exception") {
-  color: purple;
+.caso12 p:not(p.exception) {
+  background-color: purple;
+  color: white;
+}
+
+/* :root Selecciona el elemento raiz del documento */
+:root {
+  background-color: aquamarine;
+}
+
+/* :enabled Selecciona cada elemento que esté activo o habilitado */
+.caso13-14-15 :enabled {
+  background-color: red;
+}
+
+/* :disabled Selecciona cada elemento que esté deshabilitadoo */
+.caso13-14-15 :disabled {
+  margin: 5px;
+  width: 100%;
+  height: 10px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: purple;
+}
+
+/* :checked Selecciona los elementos input de radio buttons y chackboxes así como los elementos option */
+.caso13-14-15 input:checked {
+  background-color: orange;
+  outline: 4px solid red;
+  transform: scale(1.2);
 }

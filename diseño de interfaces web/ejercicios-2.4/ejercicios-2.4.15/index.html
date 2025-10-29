@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejemplo de posiciones CSS</title>
+
+        <style>
+            /* Estilos generales */
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                height: 200vh;
+                background-color: #f4f4f4;
+            }
+
+            .contenedor {
+                position: relative;
+                width: 80%;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #ddd;
+                border: 2px solid #555;
+                height: 600px;
+            }
+
+            .hijo {
+                padding: 15px;
+                color: white;
+                font-weight: bold;
+                margin: 10px 0;
+                border-radius: 6px;
+            }
+
+            .hijo1 {
+                background-color: #0074D9;
+                position: static;
+            }
+
+            .hijo2 {
+                background-color: #2ECC40;
+                position: relative;
+                top: 20px;
+                left: 30px;
+            }
+
+            .hijo3 {
+                background-color: #FF4136;
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                z-index: 1000;
+            }
+
+            .hijo4 {
+                background-color: #FF851B;
+                position: absolute;
+                bottom: 10px;
+                right: 20px;
+            }
+
+            .hijo5 {
+                background-color: #B10DC9;
+                position: sticky;
+                top: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="contenedor">
+            <div class="hijo hijo1">Elemento 1 — posición estática</div>
+            <div class="hijo hijo2">Elemento 2 — posición relativa</div>
+            <div class="hijo hijo3">Elemento 3 — posición fija</div>
+            <div class="hijo hijo4">Elemento 4 — posición absoluta</div>
+            <div class="hijo hijo5">Elemento 5 — posición sticky</div>
+        </div>
+    </body>
+
+</html>

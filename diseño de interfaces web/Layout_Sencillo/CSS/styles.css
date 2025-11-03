@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #4a465b;
+    font-family: Arial, sans-serif;
+    color: black;
+    line-height: 27px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+
+
+header {
+    background: white;
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+}
+
+.menu li a:hover {
+    background: black;
+    color: white;
+}
+
+
+
+.main {
+    width: 70%;
+    float: left;
+    background: white;
+    margin-bottom: 20px;
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+}
+
+.posts article h2 {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.posts article p {
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+
+
+aside {
+    width: 30%;
+    float: left;
+    background: #161f26;
+    color: white;
+    padding: 20px;
+}
+
+.widget {
+    margin-bottom: 20px;
+}
+
+.widget .titulo {
+    color: #ff8000;
+    margin-bottom: 10px;
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.widget ul li a:hover {
+    color: #8f8f8f;
+}
+
+
+
+footer {
+    clear: both;
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+
+
+/* RSION MOVIL */
+@media screen and (max-width: 800px) {
+    .main,
+    aside {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu li {
+        display: inline-block;
+        margin: 10px 0;
+    }
+
+    .menu li a {
+        display: block;
+        background: white;
+    }
+}

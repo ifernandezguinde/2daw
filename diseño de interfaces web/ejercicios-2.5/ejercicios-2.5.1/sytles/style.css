@@ -1,0 +1,38 @@
+* {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto 0px;
+    border-collapse: collapse;
+    caption-side: bottom;
+}
+
+caption {
+    font-size: 20px;
+    padding: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #009688;
+    color: #fff;
+}
+
+.impar {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #c7e2e0;
+}
+
+td:nth-child(3)::after {
+    content: " €";
+}

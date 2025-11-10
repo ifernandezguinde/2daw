@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ejercicio 2.5.8</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .div1 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            transition-delay: 1s;
+            transition-duration: 3s;
+            transition-timing-function: ease-out;
+        }
+
+        .div1:hover {
+            transform: rotate(360deg) scale(2.0);
+            background-color: red;
+        }
+
+        .div2 {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            opacity: 60%;
+            transition-duration: 5s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .div2:hover {
+            transform: skew(20deg);
+            background-color: pink;
+            opacity: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">
+
+    </div>
+
+    <div class="div2">
+
+    </div>
+</body>
+
+</html>

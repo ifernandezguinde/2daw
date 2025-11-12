@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>ejercicio 2.5.14.1</title>
+    <meta charset="utf-8">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 999;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        section {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            color: black;
+        }
+
+        section:nth-child(odd) {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#section1">Sección 1</a></li>
+            <li><a href="#section2">Sección 2</a></li>
+            <li><a href="#section3">Sección 3</a></li>
+            <li><a href="#section4">Sección 4</a></li>
+        </ul>
+    </nav>
+    <section id="section1">Sección 1</section>
+    <section id="section2">Sección 2</section>
+    <section id="section3">Sección 3</section>
+    <section id="section4">Sección 4</section>
+</body>
+
+</html>

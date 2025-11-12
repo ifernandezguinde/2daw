@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>ejercicio 2.5.14.1</title>
+        <meta charset="utf-8">
+        <style>
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            .container {
+                height: 1000px;
+            }
+
+            a {
+                display: flex;
+                padding: 10px 20px;
+                font-size: 1.2rem;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+            }
+
+            a:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container" id="scrollBtn">
+            <p>Haz scroll hasta el final de la página y presiona el botón "Ir
+                arriba"</p>
+        </div>
+        <a href="#scrollBtn">↑ Ir arriba</a>
+    </body>
+</html>

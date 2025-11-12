@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Ejercicio 2.5.11</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            .imagen1 {
+                background-image: url(./images/camaleon.jpg);
+                background-size: cover;
+                position: relative;
+                width: 500px;
+                height: 300px;
+            }
+
+            .text1 {
+                background-color: black;
+                color: white;
+                font-size: 3em;
+                font-weight: bold;
+                margin: 0;
+                padding: 10px;
+                width: 50%;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                mix-blend-mode: overlay;                
+            }
+
+            .imagen2 {
+                background-image: url(./images/camaleon.jpg);
+                background-size: cover;
+                position: relative;
+                width: 500px;
+                height: 300px;
+            }
+
+            .color-dodge {
+                width: 500px;
+                height: 400px;
+                position: absolute;
+                background-color: orange;
+                mix-blend-mode: color-dodge;
+                opacity: 0.8;
+            }
+
+            .text2 {
+                color: black;
+                font-size: 3em;
+                font-weight: bold;
+                text-align: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+            }
+
+            .imagen3 {
+                background-image: url(./images/camaleon.jpg);
+                background-size: cover;
+                position: relative;
+                width: 500px;
+                height: 300px;
+            }
+
+            .text3 {
+                color: white;
+                font-size: 3em;
+                font-weight: bold;
+                margin: 0;
+                width: 50%;
+                text-align: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                mix-blend-mode: difference;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="imagen1">
+            <div class="text1"> ejemplo1 </div>
+        </div>
+
+        <div class="imagen2">
+            <div class="color-dodge"></div>
+            <div class="text2"> ejemplo2 </div>
+        </div>
+
+        <div class="imagen3">
+            <div class="text3"> ejemplo3 </div>
+        </div>
+    </body>
+</html>

@@ -1,21 +1,33 @@
-body {
+* {
     font-family: Arial, sans-serif;
-}
-
-.main {
-    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .contenedor {
     background-color: #ccc;
+    margin: 40px 150px;
+}
+
+.main {
+    background-color: #f2f2f2;
+    padding: 15px;
+    float: left;
+    width: 75%;
 }
 
 aside {
     background-color: #e8c547;
     color: white;
+    padding: 15px;
+    width: 25%;
+    float: left;
 }
 
 footer, header {
     background-color: #4d5061;
     color: white;
+    padding: 15px;
+    clear: both;
 }

@@ -17,23 +17,21 @@
         }
 
         .div1:hover {
-            transform: rotate(360deg) scale(2.0);
+            transform: rotate(360deg) scaleX(2.0);
             background-color: red;
         }
 
         .div2 {
             width: 200px;
             height: 200px;
-            background-color: gray;
-            opacity: 60%;
+            background-color: rgba(128, 128, 128, 0.4);
             transition-duration: 5s;
             transition-timing-function: ease-in-out;
         }
 
         .div2:hover {
-            transform: skew(20deg);
+            transform: skew(20deg, 3deg) translate(50%);
             background-color: pink;
-            opacity: 100%;
         }
     </style>
 </head>

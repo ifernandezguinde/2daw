@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ejercicio 2.5.9</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('iconos/icomoon-v1.0/fonts/icomoon.eot?f9p2u0');
+            src: url('iconos/icomoon-v1.0/fonts/icomoon.eot?f9p2u0#iefix') format('embedded-opentype'),
+                url('iconos/icomoon-v1.0/fonts/icomoon.ttf?f9p2u0') format('truetype'),
+                url('iconos/icomoon-v1.0/fonts/icomoon.woff?f9p2u0') format('woff'),
+                url('iconos/icomoon-v1.0/fonts/icomoon.svg?f9p2u0#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+
+        [class^="icon-"],
+        [class*=" icon-"] {
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icomoon' !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .icon-dice:before {
+            content: "\e915";
+        }
+
+        .icon-html-five2:before {
+            content: "\eae5";
+        }
+
+        .icon-dice {
+            width: 40px;
+            height: 40px;
+            font-size: 40px;
+            margin: 20px;
+            float: left;
+        }
+
+        .icon-html-five2 {
+            width: 40px;
+            height: 40px;
+            font-size: 40px;
+            margin: 20px;
+            float: left;
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+
+        .fa-inbox {
+            font-size: 30px;
+        }
+
+        .fa-thumbs-up {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Apartado a</h3>
+
+    <div>
+        <button class="button1" aria-label="inbox">
+            <i class="fa-solid fa-inbox" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <div>
+        <button class="button2">
+            <i class="fa-solid fa-thumbs-up"></i>
+        </button>
+    </div>
+
+    <h3>Apartado b</h3>
+
+    <div>
+        <i class="icon-dice" aria-hidden="true"></i>
+    </div>
+
+    <div>
+        <i class="icon-html-five2" aria-hidden="true"></i>
+    </div>
+</body>
+
+</html>

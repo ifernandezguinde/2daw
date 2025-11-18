@@ -1,10 +1,10 @@
 .open-sans-contenedor {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
 }
 
 .contenedor {
@@ -20,14 +20,14 @@ body {
 }
 
 body {
-    margin: 80px 180px;
+    margin: 5% 8%;
 }
 
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 nav a {
@@ -61,7 +61,7 @@ article p {
 
 aside {
     align-items: center;
-    background-color:  #537dca;
+    background-color: #537dca;
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@ aside {
 }
 
 footer {
-    background-color: rgba(255,255,255,.2);
+    background-color: rgba(255, 255, 255, .2);
     color: white;
     clear: both;
     display: flex;
@@ -94,4 +94,52 @@ footer {
 footer a {
     color: white;
     padding: 5px;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        background-color: rgba(255, 255, 255, .2);
+        width: 100%;
+        padding: 15px;
+    }
+
+    nav a {
+        margin: 10px;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    main,
+    aside {
+        width: 100%;
+    }
+
+    aside {
+        flex-direction: row;
+        gap: 90px;
+    }
+
+    footer {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    aside {
+        display: none;
+    }
 }

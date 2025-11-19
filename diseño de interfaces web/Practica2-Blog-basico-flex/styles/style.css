@@ -17,9 +17,6 @@
 
 body {
     background-image: url(../imagenes/fondo.jpg);
-}
-
-body {
     margin: 5% 8%;
 }
 
@@ -27,6 +24,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 25px;
 }
 
@@ -47,7 +45,7 @@ nav a:hover {
 
 main {
     background-color: white;
-    width: 80%;
+    width: 75%;
     padding: 20px;
 }
 
@@ -62,7 +60,7 @@ article p {
 aside {
     align-items: center;
     background-color: #537dca;
-    width: 20%;
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -83,7 +81,6 @@ aside {
 footer {
     background-color: rgba(255, 255, 255, .2);
     color: white;
-    clear: both;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,12 +94,13 @@ footer a {
 }
 
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
     header {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        gap: 20px;
     }
 
     nav {
@@ -119,8 +117,7 @@ footer a {
         flex-direction: column;
     }
 
-    main,
-    aside {
+    main, aside {
         width: 100%;
     }
 
@@ -138,7 +135,7 @@ footer a {
 
 }
 
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
     aside {
         display: none;
     }

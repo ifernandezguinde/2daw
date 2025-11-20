@@ -36,12 +36,116 @@ h3 {
     font-size: 14px;
 }
 
-.main a {
+.menu a {
     color: white;
     text-decoration: none;
 }
 
-.main a:hover {
+.menu a:hover {
     text-decoration: underline;
     text-underline-offset: 10px;
+}
+
+
+/* colores de fuente */
+
+.trabajos .contenedor {
+    background-color: #f2f2f2;
+}
+
+.texto .titulo {
+    color: #dd820d;
+}
+
+.texto p {
+    color: #5a5a5a;
+}
+
+.texto .bold {
+    color: #3895EA;
+}
+
+.contenedor .titulo {
+    color: #323068;
+}
+
+.descripcion .nombre, .contacto .titulo {
+    color: #3895EA;
+}
+
+.descripcion .categoria {
+    color: #636363;
+}
+
+
+
+/* footer */
+
+/* formulario */
+
+.formulario .text, .email, .mensaje {
+    border-color: #cecece;
+}
+
+.formulario .text:active, .email:active, .mensaje:active {
+    border-color: black;
+}
+
+/* iconos */
+
+.formulario .boton {
+    background-color: #3895EA   ;
+}
+
+.formulario .boton:hover {
+    background-color: #387bea;
+}
+
+.redes-sociales .contenedor {
+    background-color: #1e2b38;
+}
+
+.contenedor .twitter {
+    background-image: url(../iconos/x-twitter-brands-solid-full.svg);
+}
+
+.contenedor .twitter:hover {
+    background-color: #55acee;
+    padding: 10px;
+}
+
+.contenedor .facebook {
+    background-image: url(../iconos/facebook-f-brands-solid-full.svg);
+}
+
+.contenedor .facebook:hover {
+    background-color: #3b5998;
+    padding: 10px;
+}
+
+.contenedor .youtube {
+    background-image: url(../iconos/youtube-brands-solid-full.svg);
+}
+
+.contenedor .youtube:hover {
+    background-color: #cd201f;
+    padding: 10px;
+}
+
+.contenedor .github {
+    background-image: url(../iconos/github-brands-solid-full.svg);
+}
+
+.contenedor .github:hover {
+    background-color: #666666;
+    padding: 10px;
+}
+
+.contenedor .instagram {
+    background-image: url(../iconos/instagram-brands-solid-full.svg);
+}
+
+.contenedor .instagram:hover {
+    background-color: #3f729b;
+    padding: 10px;
 }

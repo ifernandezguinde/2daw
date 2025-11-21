@@ -35,24 +35,12 @@ header .contenedor {
     position: relative;
 }
 
-header .contenedor::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(38, 130, 204, 0.65);
-    /* overlay azul */
-    z-index: 0;
-}
-
-header .menu,
-.contenedor-texto {
+header .menu, .contenedor-texto {
     position: relative;
-    z-index: 1;
 }
 
 
 header .menu {
-    position: relative;
     display: flex;
     justify-content: flex-end;
     padding: 30px 60px;
@@ -63,10 +51,12 @@ header .menu {
 header .menu a {
     color: white;
     text-decoration: none;
+    transform: translate(-200px, 60px);
 }
 
 header .menu a:hover {
     text-decoration: underline;
+    text-underline-offset: 15px;
 }
 
 .contenedor-texto {
@@ -74,15 +64,17 @@ header .menu a:hover {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 17%;
 }
 
 .contenedor-texto .texto {
+    width: 600px;
     text-align: center;
     color: white;
     padding: 30px 60px;
-    border: 2px solid rgba(255, 255, 255, 0.7);
+    border: 2px solid white;
     border-radius: 4px;
+    transform: translateY(50px);
 }
 
 .nombre {
@@ -92,7 +84,6 @@ header .menu a:hover {
 
 .profesion {
     font-size: 20px;
-    opacity: 0.9;
 }
 
 
@@ -111,7 +102,7 @@ header .foto img {
     width: 115px;
     height: 115px;
     border-radius: 50%;
-    border: 4px solid skyblue;
+    border: 5px solid rgba(255, 255, 255, 0.2);
 }
 
 
@@ -121,6 +112,7 @@ header .foto img {
 .acerca-de {
     padding: 60px 0;
     text-align: center;
+    margin-top: 2%;
 }
 
 .acerca-de .titulo {
@@ -138,7 +130,9 @@ header .foto img {
 
 .bold {
     color: #3895EA;
+    text-decoration: underline;
 }
+
 
 /* trabajos */
 
@@ -164,8 +158,7 @@ header .foto img {
 }
 
 .trabajo {
-    width: calc(25% - 35px);
-    /* 4 elementos por fila */
+    width: calc(25% - 35px); /* 4 elementos por fila */
     overflow: hidden;
     text-align: center;
     padding-bottom: 15px;
@@ -205,27 +198,43 @@ header .foto img {
 }
 
 .formulario {
-    width: 40%;
+    width: 84%;
     margin: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
+
 }
 
-.formulario input,
-.formulario textarea {
+.formulario input, .formulario textarea {
+    width: 100%;
     padding: 12px;
     border: 1px solid #cecece;
     border-radius: 4px;
     font-size: 15px;
 }
 
-.formulario textarea {
-    height: 110px;
+.formulario .fila-arriba {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.formulario .textarea {
+    height: 80px;
     resize: none;
 }
 
+.formulario input:focus, .textarea:focus {
+    border: 2px solid black;
+    outline: none;
+}
+
 .formulario .boton {
+    width: 7%;
     background: #3895EA;
     color: white;
     border: none;
@@ -240,9 +249,7 @@ header .foto img {
 }
 
 
-/* --------------------------------------------------
-   FOOTER
--------------------------------------------------- */
+/* ICONOS */
 
 .redes-sociales {
     background: #1e2b38;
@@ -259,38 +266,15 @@ header .foto img {
 }
 
 .redes-sociales a {
-    width: 25px;
-    height: 25px;
-    background-size: cover;
-    display: block;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%; /* tamaño del icono dentro del recuadro */
 }
 
-.redes-sociales .twitter:hover {
-    background-color: #55acee;
-    border-radius: 3px;
-}
-
-.redes-sociales .facebook:hover {
-    background-color: #3b5998;
-    border-radius: 3px;
-}
-
-.redes-sociales .youtube:hover {
-    background-color: #cd201f;
-    border-radius: 3px;
-}
-
-.redes-sociales .github:hover {
-    background-color: #666666;
-    border-radius: 3px;
-}
-
-.redes-sociales .instagram:hover {
-    background-color: #3f729b;
-    border-radius: 3px;
-}
-
-/* iconos */
 .twitter {
     background-image: url(../iconos/x-twitter-brands-solid-full.svg);
 }
@@ -309,4 +293,29 @@ header .foto img {
 
 .instagram {
     background-image: url(../iconos/instagram-brands-solid-full.svg);
+}
+
+.redes-sociales .twitter:hover {
+    background-color: #55acee;
+    border-radius: 5px;
+}
+
+.redes-sociales .facebook:hover {
+    background-color: #3b5998;
+    border-radius: 5px;
+}
+
+.redes-sociales .youtube:hover {
+    background-color: #cd201f;
+    border-radius: 5px;
+}
+
+.redes-sociales .github:hover {
+    background-color: #666666;
+    border-radius: 5px;
+}
+
+.redes-sociales .instagram:hover {
+    background-color: #3f729b;
+    border-radius: 5px;
 }

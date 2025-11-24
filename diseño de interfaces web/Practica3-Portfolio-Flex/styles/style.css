@@ -216,7 +216,7 @@ header .foto img {
 .contacto .titulo {
     font-size: 26px;
     color: #3895EA;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .formulario {
@@ -258,12 +258,11 @@ header .foto img {
 }
 
 .formulario .boton {
+    min-width: 100px;
     width: 7%;
     background: #3895EA;
     color: white;
-    border: none;
     padding: 12px;
-    cursor: pointer;
     border-radius: 4px;
     font-size: 16px;
 }
@@ -276,29 +275,35 @@ header .foto img {
 /* ICONOS */
 
 .redes-sociales {
+    width: 100%;
+    height: 150px;
     background: #1e2b38;
-    padding: 40px 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0px 20%;
 }
 
 .redes-sociales .contenedor {
+    width: 100%;
+    align-items: center;
     display: flex;
-    gap: 200px;
-    margin-top: 20px;
+    justify-content: space-between;
+    
 }
 
 .redes-sociales a {
+    min-width: 60px;
+    min-height: 60px;
     width: 60px;
     height: 60px;
     display: inline-block;
-    position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 50%;
     /* tamaño del icono dentro del recuadro */
-}
+} 
+
 
 .twitter {
     background-image: url(../iconos/x-twitter-brands-solid-full.svg);
@@ -359,15 +364,12 @@ header .foto img {
     }
 
     .trabajo {
-        width: calc(50% - 35px); /* 2 elementos por fila */
+        width: calc(50% - 35px);
+        /* 2 elementos por fila */
     }
 
     .formulario .boton {
         width: 15%;
-    }
-
-    .redes-sociales .contenedor {
-        gap: 80px;
     }
 }
 
@@ -375,7 +377,8 @@ header .foto img {
 
 
     .trabajo {
-        width: 100%; /* 1 elemento por fila */
+        width: 100%;
+        /* 1 elemento por fila */
     }
 
     .formulario .boton {

@@ -385,7 +385,18 @@ header .foto img {
         width: 20%;
     }
 
-    .redes-sociales .contenedor a {
-        width: 33%;
+    .redes-sociales {
+        padding: 0 10%;
+    }
+
+    .redes-sociales .contenedor {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20%;
+    }
+    
+    .redes-sociales a {
+        width: 20%;
+        margin: 5px 0;
     }
 }

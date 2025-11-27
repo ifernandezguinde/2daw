@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 2.6.4</title>
+
+        <style>
+            .item1 {grid-area: c1;}
+            .item2 {grid-area: c2;}
+            .item3 {grid-area: c3;}
+            .item4 {grid-area: c4;}
+            .item5 {grid-area: c5;}
+            .subitem1 {grid-area: l1;}
+            .subitem2 {grid-area: l2;}
+            .subitem3 {grid-area: l3;}
+            .subitem4 {grid-area: l4;}
+            .subitem5 {grid-area: l5;}
+
+            .contenedor {
+                padding: 40px 600px;
+                display: grid;
+                grid-gap: 2px;
+                grid-template-areas: 
+                'c1 c2 c2'
+                'c3 c4 c4'
+                'c5 c4 c4';
+                justify-items: stretch;
+                align-content: center;
+            }
+
+            .contenedor div {
+                color: white;
+                font-size: 20px;
+                padding: 20px;
+                text-align: center;
+                background-color: rgb(99, 110, 119);
+            }
+
+            .contenedor .item4 {
+                padding: auto;
+                display: grid;
+                grid-template-areas: 
+                'l1 l1'
+                'l2 l3'
+                'l4 l5';
+                justify-items: stretch;
+                align-content: center;
+            }
+
+            .contenedor .item4 div {
+                color: black;
+                background-color: rgb(224, 220, 220);
+            }
+
+            .subitem1, .subitem2, .subitem3 {
+                border-bottom: 1px solid white;
+            }
+
+            .subitem2, .subitem4 {
+                border-right: 1px solid white;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="contenedor">
+            <div class="item1">celda 1</div>
+            <div class="item2">celda 2</div>
+            <div class="item3">celda 3</div>
+            <div class="item4">
+                <div class="subitem1">Grid Anidado</div>
+                <div class="subitem2">Lista 2</div>
+                <div class="subitem3">Lista 3</div>
+                <div class="subitem4">Lista 4</div>
+                <div class="subitem5">Lista 5</div>
+            </div>
+            <div class="item5">celda 5</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 2.6.2</title>
+
+        <style>
+            .item1 {grid-area: c1;}
+            .item2 {grid-area: c2;}
+            .item3 {grid-area: c3;}
+            .item4 {grid-area: c4;}
+            .item5 {grid-area: c5;}
+            .item6 {grid-area: c6;}
+
+            .contenedor {
+                height: 900px;
+                padding-left: 300px;
+                padding-right: 300px;
+                padding-top: 300px;
+                padding-bottom: 200px;
+                height: 500px;
+                display: grid;  
+                grid-gap: 2px;
+                justify-items: auto;
+                grid-template-areas: 
+                'c1 c1 c1 c1 c1'
+                'c2 c3 c3 c4 c4'
+                'c2 c5 c5 c6 c6';
+            }
+
+            .contenedor div {
+                color: white;
+                background-color: gray;
+                text-align: center;
+                text- ;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="contenedor">
+            <div class="item1">Usando grid-areas</div>
+            <div class="item2">celda 2</div>
+            <div class="item3">celda 3</div>
+            <div class="item4">celda 4</div>
+            <div class="item5">celda 5</div>
+            <div class="item6">celda 6</div>
+        </div>
+    </body>
+</html>

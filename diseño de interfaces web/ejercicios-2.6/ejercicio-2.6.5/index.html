@@ -7,7 +7,99 @@
         <title>Ejercicio 2.6.5</title>
     
         <style>
-        
+            .content .aside :nth-child(1) {grid-area: ad1;}
+            .content .aside :nth-child(2) {grid-area: ad2;}
+            .content .aside :nth-last-child {grid-area: ad3;}
+
+            body {
+                min-height: 100vh;
+                color: white;
+                background-color: #f0f0f0;
+                padding: 100px 500px;
+                font-size: 12px;
+                display: grid;
+                grid-gap: 6px;
+                grid-template-areas: 
+                'header'
+                'content'
+                'footer';
+                grid-template-columns: 1fr;
+                justify-content: center;
+            }
+
+            .content {
+                height: 300px;
+                grid-area: content;
+                display: grid;
+                grid-template-areas: 
+                'main aside';
+                grid-template-columns: 2fr 1fr;
+                grid-gap: 6px;
+            }
+
+            .aside {
+                border-left: 2px solid white;
+            }
+
+            .header-nav {
+                padding-top: 10px;
+                background-color: #007bff;
+                display: grid;
+                justify-content: center;
+                justify-items: center;
+            }
+
+            .header-nav .logo {
+                font-size: 16px;
+                font-weight: bold;
+                align-self: center;
+            }
+
+            .header-nav .nav {
+                margin-left: -30px;
+            }
+
+            .header-nav .nav li{
+                list-style-type: none;
+                display: inline-block;
+                margin: 0 5px;
+            }
+
+            .header-nav .nav a{
+                color: white;
+                text-decoration: none;
+            }
+
+            .content .main {
+                padding: 20px;
+                background-color: #28a745;
+            }
+
+            .content .aside {
+                background-color: #ffc107;
+                padding: 15px;
+                display: grid;
+                grid-gap: 6px;
+                grid-template-areas: 
+                'ad1'
+                'ad2'
+                'ad3';
+                
+            }
+
+            .content .aside .ad {
+                padding-top: 20px;
+                text-align: center;
+                background-color: #6c757d;
+            }
+
+            body .footer {
+                margin-top: -190px;
+                text-align: center;
+                align-content: center;
+                height: 30px;
+                background-color: #dc3545;
+            }
         </style>
     </head>
     
@@ -18,10 +110,10 @@
             </header>
             <nav class="nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a class="a1" href="#">Home</a></li>
+                    <li><a class="a1" href="#">About</a></li>
+                    <li><a class="a3" href="#">Services</a></li>
+                    <li><a class="a4" href="#">Contact</a></li>
                 </ul>
             </nav>
         </div>

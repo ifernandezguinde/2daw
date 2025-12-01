@@ -1,3 +1,24 @@
+/* fuente montserrat google fonts */
+.montserrat-body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root {
+    --primary-blue: #074167;
+    --dark-blue: #143548;
+    --background-light: #ffebd9;
+    --hover-light: #CCB299;
+}
+
+body {
+    font-family: "Monserrat", sans-serif;
+}
+
 .cta-container {
     background-image: url(../images/gato-fondo-e1701355048196.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }

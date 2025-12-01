@@ -1,0 +1,121 @@
+/* fuente montserrat google fonts */
+.montserrat-body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root {
+    --primary-blue: #074167;
+    --dark-blue: #143548;
+    --background-light: #ffebd9;
+    --hover-light: #CCB299;
+}
+
+
+/* header */
+
+body {
+    font-family: "Monserrat", sans-serif;
+}
+
+header {
+    background-color: var(--dark-blue);
+}
+
+.logo img {
+    transition: transform 0.25s ease;
+}
+
+.logo img:hover {
+    transform: rotate(360deg);
+}
+
+.search input {
+    transition: scale 0.25s ease;
+}
+
+.search input:hover {
+    scale: 1.1;
+}
+
+.search .lupa {
+    transition: scale 0.25s ease;
+}
+
+.search .lupa:hover {
+    scale: 1.3;
+}
+
+
+
+header nav .menu a, header nav .menu li {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+header nav .menu a:hover, footer .footer-menu a:hover {
+    color: var(--hover-light);
+}
+
+
+
+
+/* main */
+
+.cta-container {
+    background-image: url(../images/gato-fondo-e1701355048196.jpg);
+    filter: sepia(30%);
+    position: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+    
+.cta-container h1 {
+    color: var(--dark-blue);
+}
+
+
+/* footer */
+
+footer .footer-menu {
+    background-color: var(--dark-blue);
+}
+
+footer .footer-menu h3, footer .footer-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+footer .footer-copy {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.footer-copy a {
+    color: white;
+}
+
+
+/* hovers */
+
+.footer-copy .facebook:hover {
+    background-color: #3b5998;
+}
+
+.footer-copy .twitter:hover {
+    background-color: #1DA1F2;
+}
+
+.footer-copy .instagram:hover {
+    background-color: #fd1d1d;
+}
+
+.footer-copy .linkedin:hover {
+    background-color: #0A66C2;
+}
+
+

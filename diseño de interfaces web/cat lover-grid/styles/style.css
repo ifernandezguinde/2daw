@@ -1,3 +1,15 @@
+.menu {grid-area: menu;}
+.logo {grid-area: logo;}
+.search {grid-area: search;}
+.footer-copy {grid-area: iconos;}
+.footer-menu {grid-area: enlaces;}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* fuente montserrat google fonts */
 .montserrat-body {
     font-family: "Montserrat", sans-serif;
@@ -18,20 +30,28 @@
 
 body {
     font-family: "Montserrat", sans-serif;
-    /* espacio inferior para que el contenido no quede oculto por el footer fijo */
-    padding-bottom: 90px;
+    min-height: 100vh;
+    margin: 0;
 }
 
 header {
+    padding: 5px 20px;
     background-color: var(--dark-blue);
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'menu logo search';
+    justify-content: space-between;
+    align-items: center;
     position: relative;
     z-index: 10;
 }
 
 .logo img {
-    position: fixed;
+    position: relative;
     transition: transform 0.25s ease;
-    z-index: -20;
+    display: block;
+    align-self: center;
 }
 
 .logo img:hover {
@@ -39,6 +59,8 @@ header {
 }
 
 .search input {
+    background-color: var(--background-light);
+    margin-right: 30px;
     border-radius: 4px;
     transition: scale 0.25s ease;
 }
@@ -48,22 +70,32 @@ header {
 }
 
 .search .lupa {
+    color: var(--background-light);
+    background: none;
+    border: none;
     transition: scale 0.25s ease;
+    transform: scaleX(-1);
 }
 
 .search .lupa:hover {
     scale: 1.3;
 }
 
+.search .hamburger {
+    display: none;
+}
 
-
-header nav .menu a, header nav .menu li {
+header nav .menu a, 
+header nav .menu li {
+    display: inline-block;
+    margin-right: 10px;
     color: white;
     text-decoration: none;
     list-style: none;
 }
 
-header nav .menu a:hover, footer .footer-menu a:hover {
+header nav .menu a:hover, 
+footer .footer-menu a:hover {
     color: var(--hover-light);
 }
 
@@ -74,18 +106,20 @@ header nav .menu a:hover, footer .footer-menu a:hover {
 
 .cta-container {
     background-image: url(../images/gato-fondo-e1701355048196.jpg);
+    background-attachment: fixed;
     filter: sepia(30%);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    align-content: end;
+    text-align: center;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
+    min-height: 150vh;
 }
     
 .cta-container h1 {
+    padding-bottom: 30%;
+    font-size: 7.5vw;
     color: var(--dark-blue);
     text-shadow: 8px 4px 6px var(--hover-light);
 }
@@ -95,28 +129,29 @@ header nav .menu a:hover, footer .footer-menu a:hover {
 
 /* Hacer que el footer quede siempre en la parte inferior de la ventana */
 footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    z-index: 50;
-}
-
-footer .footer-menu {
-    position: static;
-    background-color: var(--dark-blue);
-}
-
-footer .footer-menu h3, footer .footer-menu a {
-    text-decoration: none;
-    color: white;
+    display: grid;
+    grid-template-areas:
+    'iconos'
+    'enlaces';
+    text-align: center;
 }
 
 footer .footer-copy {
-    position: relative;
+    padding: 10px;
     background-color: var(--primary-blue);
     color: white;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto auto  auto;
+    z-index: 2;
+}
+
+footer .footer-copy .social-icons {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    grid-gap: 20%;
 }
 
 .footer-copy a {
@@ -124,22 +159,69 @@ footer .footer-copy {
 }
 
 
+footer .footer-menu {
+    padding: 20px;
+    background-color: var(--dark-blue);
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: repeat(4, auto);
+    z-index: 0;
+}
+
+.footer-menu div {
+    display: grid;
+    text-align: left;
+    grid-template-rows: repeat(4, auto);
+}
+
+.footer-menu div h3 {
+    padding-bottom: 5px;
+}
+
+footer .footer-menu h3, 
+footer .footer-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
 /* hovers */
 
+.footer-copy .facebook {
+    transition: scale 0.25s ease;
+}
+
 .footer-copy .facebook:hover {
-    background-color: #3b5998;
+    color: #3b5998;
+    scale: 1.5;
+    
+}
+
+.footer-copy .twitter {
+    transition: scale 0.25s ease;
 }
 
 .footer-copy .twitter:hover {
-    background-color: #1DA1F2;
+    scale: 1.5;
+}
+
+.footer-copy .instagram {
+    transition: scale 0.25s ease;
 }
 
 .footer-copy .instagram:hover {
-    background-color: #fd1d1d;
+    color: #fd1d1d;
+    scale: 1.5;
+}
+
+.footer-copy .linkedin {
+    transition: scale 0.25s ease;
 }
 
 .footer-copy .linkedin:hover {
-    background-color: #0A66C2;
+    color: #0A66C2;
+    scale: 1.5;
 }
 
 
@@ -153,3 +235,102 @@ header .search input,
   cursor: pointer;
 }
 
+
+/* tamaño movil */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        display: grid;
+        grid-template-areas:
+        'logo search';
+        justify-content: space-between;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .logo img {
+        height: auto;
+        display: block;
+    }
+
+    .search {
+        order: 1;
+        margin-left: auto;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 0.5rem;
+    }
+
+    .search input {
+        display: none;
+    }
+
+    .search .lupa,
+    .search .hamburger {
+        color: var(--background-light);
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        padding: 6px;
+        cursor: pointer;
+    }
+
+    /* Ocultar menú en móvil */
+    header nav .menu {
+        display: none;
+        padding: 20px 0px 20px 10px;
+        margin-right: 5px;
+        justify-content: space-around;
+        background-color: var(--dark-blue);
+        position: absolute;
+        top: 5px;
+        /* altura del header */
+        right: 5px;
+        width: 55%;
+        border-radius: 10px;
+    }
+
+    /* Mostrar cuando se active */
+    header nav .menu.show {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .search .hamburger {
+        transition: scale 0.25s ease;
+        transform: scaleX(-1);
+    }
+
+    .search .hamburger:hover {
+        scale: 1.3;
+    }
+
+    .cta-container {
+        min-height: 100vh;
+    }
+
+    .cta-container h1 {
+        font-size: 11vw;
+        padding-bottom: 40%;
+    }
+
+    footer .footer-menu {
+        padding-top: 40px;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+        
+    }
+
+    footer .footer-menu div {
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+}

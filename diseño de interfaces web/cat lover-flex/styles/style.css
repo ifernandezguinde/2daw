@@ -31,7 +31,7 @@ body {
 }
 
 header {
-    padding: 5px 10px;
+    padding: 5px 20px;
     background-color: var(--dark-blue);
     width: 100%;
     position: relative;
@@ -54,7 +54,8 @@ header {
 }
 
 .search input {
-    margin-right: 5px;
+    background-color: var(--background-light);
+    margin-right: 30px;
     border-radius: 4px;
     transition: scale 0.25s ease;
 }
@@ -64,7 +65,7 @@ header {
 }
 
 .search .lupa {
-    color: white;
+    color: var(--background-light);
     background: none;
     border: none;
     transition: scale 0.25s ease;
@@ -80,7 +81,8 @@ header {
 }
 
 
-header nav .menu a, header nav .menu li {
+header nav .menu a,
+header nav .menu li {
     display: inline-block;
     margin-right: 10px;
     color: white;
@@ -88,7 +90,8 @@ header nav .menu a, header nav .menu li {
     list-style: none;
 }
 
-header nav .menu a:hover, footer .footer-menu a:hover {
+header nav .menu a:hover,
+footer .footer-menu a:hover {
     color: var(--hover-light);
 }
 
@@ -99,19 +102,22 @@ header nav .menu a:hover, footer .footer-menu a:hover {
 
 .cta-container {
     background-image: url(../images/gato-fondo-e1701355048196.jpg);
+    background-attachment: fixed;
     filter: sepia(30%);
-    display: flex;
-    justify-content: center;
     align-items: end;
-    flex: 1;
+    justify-content: center;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
+    min-height: 150vh;
+    display: flex;
+    align-items: end;
 }
-    
+
 .cta-container h1 {
-    padding-bottom: 5%;
-    font-size: 6em;
+    padding-bottom: 30%;
+    font-size: 7.5vw;
     color: var(--dark-blue);
     text-shadow: 8px 4px 6px var(--hover-light);
 }
@@ -145,7 +151,8 @@ footer .footer-menu {
     padding-bottom: 5px;
 }
 
-footer .footer-menu h3, footer .footer-menu a {
+footer .footer-menu h3,
+footer .footer-menu a {
     text-decoration: none;
     color: white;
 }
@@ -157,7 +164,7 @@ footer .footer-copy {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    text-align: center;    
+    text-align: center;
 }
 
 footer .footer-copy .social-icons {
@@ -174,20 +181,40 @@ footer .footer-copy .social-icons {
 
 /* hovers */
 
+.footer-copy .facebook {
+    transition: scale 0.25s ease;
+}
+
 .footer-copy .facebook:hover {
-    background-color: #3b5998;
+    color: #3b5998;
+    scale: 1.5;
+    
+}
+
+.footer-copy .twitter {
+    transition: scale 0.25s ease;
 }
 
 .footer-copy .twitter:hover {
-    background-color: #1DA1F2;
+    scale: 1.5;
+}
+
+.footer-copy .instagram {
+    transition: scale 0.25s ease;
 }
 
 .footer-copy .instagram:hover {
-    background-color: #fd1d1d;
+    color: #fd1d1d;
+    scale: 1.5;
+}
+
+.footer-copy .linkedin {
+    transition: scale 0.25s ease;
 }
 
 .footer-copy .linkedin:hover {
-    background-color: #0A66C2;
+    color: #0A66C2;
+    scale: 1.5;
 }
 
 
@@ -198,23 +225,18 @@ header button,
 header .search input,
 .search .lupa,
 .search .hamburger {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 
 /* tamaño movil */
 
 @media screen and (max-width: 600px) {
-    /* header */
 
     header {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-    }
-
-    header nav .menu {
-        display: none;
     }
 
     .logo {
@@ -240,7 +262,7 @@ header .search input,
 
     .search .lupa,
     .search .hamburger {
-        color: white;
+        color: var(--background-light)
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -250,9 +272,41 @@ header .search input,
         cursor: pointer;
     }
 
+    /* Ocultar menú en móvil */
+    header nav .menu {
+        display: none;
+        padding: 20px 0px 20px 10px;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--dark-blue);
+        position: absolute;
+        top: 45px;
+        /* altura del header */
+        right: 5px;
+        width: 55%;
+        border-radius: 10px;
+    }
+
+    /* Mostrar cuando se active */
+    header nav .menu.show {
+        display: flex;
+    }
+
+    .search .hamburger {
+        transition: scale 0.25s ease;
+        transform: scaleX(-1);
+    }
+
+    .search .hamburger:hover {
+        scale: 1.3;
+    }
+
+    .cta-container {
+        min-height: 100vh;
+    }
+
     .cta-container h1 {
-        padding-bottom: 20%;
-        font-size: 2.5em;
+        padding-bottom: 50%;
     }
 
     footer .footer-menu {

@@ -8,19 +8,20 @@
   <link rel="stylesheet" href="./styles/style.css">
 
   <!-- iconos -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- fuente montserrat de google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
   <!-- Header Section -->
   <header>
     <nav>
-      <ul class="menu">
+      <ul class="menu" id="mobile-menu">
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Servicios</a></li>
         <li><a href="#">Contacto</a></li>
@@ -32,7 +33,7 @@
     <div class="search">
       <input type="text" placeholder="Buscar..." autofocus>
       <button class="lupa"><i class="fas fa-search"></i></button>
-      <button class="hamburger"><i class="fas fa-bars"></i></button>
+      <button class="hamburger" id="hamburger-btn"><i class="fas fa-bars"></i></button>
     </div>
   </header>
   <div class="cta-container">
@@ -43,10 +44,10 @@
       <h3>ONLY CATS</h3>
       <small>&copy; 2000 – 2024</small>
       <div class="social-icons">
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a class="facebook" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a class="twitter" href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a class="instagram" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a class="linkedin" href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="footer-menu">
@@ -76,6 +77,14 @@
       </div>
     </div>
   </footer>
+  <script>
+    const hamburger = document.getElementById("hamburger-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    hamburger.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+  </script>
 </body>
 
 </html>

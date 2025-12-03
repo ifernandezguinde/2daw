@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Fuente montserrat */
+.montserrat-body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/* variables personalizadas */
+:root {
+    --gris-letra: #333;
+    --rosa-nav: #e91e63;
+    --rosa-hover: #d81b60;
+    --rosa-letra: #ea2466;
+    --rosa-botobes: #ea1e63;
+    --footer: rgba(0, 0, 0, 0.85);
+}
+
+
+/* estilos */
+
+/* body */
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    color: var(--gris-letra);
+    scroll-behavior: smooth;
+}
+
+
+/* header */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    align-items: center;
+    text-align: center;
+}
+
+header .titulo {
+    border-bottom: black solid 2px;
+}
+
+header .titulo h1 {
+    color: black;
+    font-weight: bold;
+    /* NO LO HACE */
+}
+
+header .titulo p {
+    color: #555;
+}
+
+
+/* nav */
+header nav .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--rosa-nav);
+}
+
+header nav a,
+header nav li {
+    padding: 5px;
+    color: white;
+    font-size: large;
+    text-decoration: none;
+    list-style: none;
+}

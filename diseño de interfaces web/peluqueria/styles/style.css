@@ -1,10 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
 /* Fuente montserrat */
 
 .montserrat-body {
@@ -13,6 +6,17 @@
     font-weight: 300;
     font-style: normal;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    color: var(--gris-letra);
+    scroll-behavior: smooth;
+}
+
+
 
 
 /* variables personalizadas */
@@ -23,6 +27,7 @@
     --rosa-hover: #d81b60;
     --rosa-letra: #ea2466;
     --rosa-botobes: #ea1e63;
+    --sombreado: rgba(240, 240, 240, 0.95);
     --footer: rgba(0, 0, 0, 0.85);
 }
 
@@ -37,24 +42,34 @@
 
 /* estilos */
 
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+p {
+    font-size: 1.6em;
+}
+
+
 /* body */
 
 body {
-    font-family: "Montserrat", sans-serif;
+    padding: 0 100px;
     background-color: white;
-    color: var(--gris-letra);
-    scroll-behavior: smooth;
 }
 
 
 /* header */
 
 header {
+    padding: 20px 0;
+    margin: 0 -100px;
     background-color: rgba(255, 255, 255, 0.95);
     text-align: center;
-}
-
-header .titulo {
     border-bottom: black solid 2px;
 }
 
@@ -71,6 +86,8 @@ header .titulo p {
 /* nav */
 
 body nav {
+    margin: 0 -100px;
+    margin-bottom: 40px;
     background-color: var(--rosa-fuerte);
     position: -webkit-sticky;
     position: sticky;
@@ -78,6 +95,7 @@ body nav {
 }
 
 body nav .menu {
+    padding: 10px 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -85,9 +103,10 @@ body nav .menu {
 
 body nav a,
 body nav li {
-    padding: 5px;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 1.3em;
     color: white;
-    font-size: large;
     text-decoration: none;
     list-style: none;
 }
@@ -112,18 +131,23 @@ main {
 }
 
 main .reservas {
+    margin-top: 50px;
+    padding: 40px;
+    padding-top: 40px;
     display: grid;
-    justify-content: center;
     grid-template-areas: 
         'bienvenida'
         'parrafo'
         'reservas-grid';
     gap: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px var(--sombreado);
 }
 
 
 main .reservas h2 {
     color: var(--rosa-fuerte);
+    text-align: center;
 }
 
 main .reservas p {
@@ -131,32 +155,62 @@ main .reservas p {
 }
 
 main .reservas .reservas-grid {
-    width: 50%;
+    margin-top: 10px;
+    width: 100%;
     display: grid;
-    grid-template-areas: 
-    'img-reserva formulario'; 
-    gap: 20px;
-    align-items: center;
+    grid-template-areas: 'img-reserva formulario';
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+    min-height: 120px;
+}
+
+main .reservas .img-reserva {
+    grid-area: img-reserva;
+    height: 100%;
+    overflow: hidden;
 }
 
 main .reservas .img-reserva img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    display: block;
     border-radius: 8px;
 }
 
 main .reservas .formulario {
     background-color: rgba(240, 240, 240, 0.95);
     border-radius: 8px;
-    padding: 20px;
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
-.formulario .form-nombre,
-.formulario .form-correo,
-.formulario .form-.telefono,
-.formulario .form-textarea {
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.formulario label {
+    display: block;
     width: 100%;
-    margin: 5px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 main .reservas .formulario button {
@@ -167,3 +221,14 @@ main .reservas .formulario button {
 main .reservas .formulario button:hover {
     background-color: #d81b60;
 }
+
+
+
+/* seccion servicios */
+
+main .servicios {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 2fr 1fr;
+}
+

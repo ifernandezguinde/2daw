@@ -60,11 +60,19 @@ header .titulo p {
 
 
 /* nav */
+
+nav {
+    background-color: var(--rosa-nav);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /* NO LO HACE */
+}
+
 header nav .menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: var(--rosa-nav);
 }
 
 header nav a,
@@ -74,4 +82,8 @@ header nav li {
     font-size: large;
     text-decoration: none;
     list-style: none;
+}
+
+header nav a:hover {
+    color: black;
 }

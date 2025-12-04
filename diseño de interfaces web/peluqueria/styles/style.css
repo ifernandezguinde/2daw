@@ -6,6 +6,7 @@
 
 
 /* Fuente montserrat */
+
 .montserrat-body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -15,14 +16,23 @@
 
 
 /* variables personalizadas */
+
 :root {
     --gris-letra: #333;
-    --rosa-nav: #e91e63;
+    --rosa-fuerte: #e91e63;
     --rosa-hover: #d81b60;
     --rosa-letra: #ea2466;
     --rosa-botobes: #ea1e63;
     --footer: rgba(0, 0, 0, 0.85);
 }
+
+
+/* areas */
+.reservas h2 {grid-area: bienvenida;}
+.reservas p {grid-area: parrafo;}
+.reservas-grid {grid-area: reservas-grid;}
+.img-reserva {grid-area: img-reserva;}
+.formulario {grid-area: formulario;}
 
 
 /* estilos */
@@ -38,9 +48,9 @@ body {
 
 
 /* header */
+
 header {
     background-color: rgba(255, 255, 255, 0.95);
-    align-items: center;
     text-align: center;
 }
 
@@ -51,7 +61,6 @@ header .titulo {
 header .titulo h1 {
     color: black;
     font-weight: bold;
-    /* NO LO HACE */
 }
 
 header .titulo p {
@@ -61,22 +70,21 @@ header .titulo p {
 
 /* nav */
 
-nav {
-    background-color: var(--rosa-nav);
+body nav {
+    background-color: var(--rosa-fuerte);
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    /* NO LO HACE */
 }
 
-header nav .menu {
+body nav .menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-header nav a,
-header nav li {
+body nav a,
+body nav li {
     padding: 5px;
     color: white;
     font-size: large;
@@ -84,6 +92,78 @@ header nav li {
     list-style: none;
 }
 
-header nav a:hover {
+body nav a:hover {
     color: black;
+}
+
+
+/* imagenes */
+
+body .imagen1 img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+/* sección bienvenida */
+
+main {
+    display: grid;
+}
+
+main .reservas {
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+        'bienvenida'
+        'parrafo'
+        'reservas-grid';
+    gap: 10px;
+}
+
+
+main .reservas h2 {
+    color: var(--rosa-fuerte);
+}
+
+main .reservas p {
+    line-height: 1.6;
+}
+
+main .reservas .reservas-grid {
+    width: 50%;
+    display: grid;
+    grid-template-areas: 
+    'img-reserva formulario'; 
+    gap: 20px;
+    align-items: center;
+}
+
+main .reservas .img-reserva img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+main .reservas .formulario {
+    background-color: rgba(240, 240, 240, 0.95);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.formulario .form-nombre,
+.formulario .form-correo,
+.formulario .form-.telefono,
+.formulario .form-textarea {
+    width: 100%;
+    margin: 5px;
+}
+
+main .reservas .formulario button {
+    background-color: var(--rosa-fuerte);
+    color: white;
+}
+
+main .reservas .formulario button:hover {
+    background-color: #d81b60;
 }

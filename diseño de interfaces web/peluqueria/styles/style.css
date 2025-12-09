@@ -33,26 +33,84 @@
 
 
 /* areas */
-.reservas h2 {grid-area: bienvenida;}
-.reservas p {grid-area: parrafo;}
-.reservas-grid {grid-area: reservas-grid;}
-.img-reserva {grid-area: img-reserva;}
-.formulario {grid-area: formulario;}
-
-
-/* estilos */
-
-h1 {
-    font-size: 3.5em;
+.reservas h2 {
+    grid-area: bienvenida;
 }
 
-h2 {
+.reservas p {
+    grid-area: parrafo;
+}
+
+.reservas-grid {
+    grid-area: reservas-grid;
+}
+
+.img-reserva {
+    grid-area: img-reserva;
+}
+
+.formulario {
+    grid-area: formulario;
+}
+
+.img1mosaico {
+    grid-area: img1;
+}
+
+.img2mosaico {
+    grid-area: img2;
+}
+
+.img3mosaico {
+    grid-area: img3;
+}
+
+.img4mosaico {
+    grid-area: img4;
+}
+
+.img5mosaico {
+    grid-area: img5;
+}
+
+.img6mosaico {
+    grid-area: img6;
+}
+
+.img7mosaico {
+    grid-area: img7;
+}
+
+.img8mosaico {
+    grid-area: img8;
+}
+
+
+/* tamaño fuente */
+
+h1 {
+    font-size: 56px;
+}
+
+h2,
+h4,
+h3 {
     color: var(--rosa-fuerte);
-    font-size: 2.5em;
+    font-size: 40px;
+}
+
+td,
+th,
+h4 {
+    font-size: 25.6px;
+}
+
+h3 {
+    font-size: 28.8px;
 }
 
 p {
-    font-size: 1.6em;
+    font-size: 24px;
 }
 
 
@@ -93,6 +151,7 @@ body nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 body nav .menu {
@@ -106,7 +165,7 @@ body nav a,
 body nav li {
     padding: 0 10px;
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 20.8px;
     color: white;
     text-decoration: none;
     list-style: none;
@@ -127,15 +186,11 @@ body .imagen1 img {
 
 /* sección bienvenida */
 
-main {
-    display: grid;
-}
-
 main .reservas {
     margin: 50px 0;
     padding: 40px;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         'bienvenida'
         'parrafo'
         'reservas-grid';
@@ -156,16 +211,15 @@ main .reservas p {
 main .reservas .reservas-grid {
     margin-top: 10px;
     width: 100%;
-    display: grid;
-    grid-template-areas: 'img-reserva formulario';
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 30px;
     align-items: stretch;
     min-height: 120px;
 }
 
 main .reservas .img-reserva {
-    grid-area: img-reserva;
+    flex: 1;
     height: 100%;
     overflow: hidden;
 }
@@ -186,6 +240,7 @@ main .reservas .formulario {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    flex: 1;
 }
 
 .formulario form {
@@ -211,7 +266,13 @@ main .reservas .formulario {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1em;
+    font-size: 16px;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--rosa-fuerte);
 }
 
 .formulario button {
@@ -233,19 +294,277 @@ main .reservas .formulario button:hover {
 
 main .servicios {
     padding: 40px;
+    margin-bottom: 50px;
     border-radius: 8px;
     box-shadow: 2px 2px 2px 2px var(--sombreado);
     display: grid;
     grid-template-rows: auto auto auto;
-    grid-gap: 10px;
+    grid-gap: 20px;
+}
+
+main .servicios table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+main .servicios table th,
+main .servicios table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+main .servicios table tbody tr:first-child td,
+main .servicios table tbody tr:nth-child(3) td,
+main .servicios table tbody tr:last-child td {
+    background-color: lightgray;
+}
+
+main .servicios th {
+    color: white;
 }
 
 main .servicios thead {
     background-color: var(--rosa-fuerte);
+}
+
+
+/* imagen parallax */
+
+main .contenedor-parallax {
+    background-image: url(https://cdn.pixabay.com/photo/2021/11/15/12/06/barber-shop-6797941_1280.jpg);
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+
+/* galería de imágenes */
+
+main .galeria-imagenes {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 20px;
+    padding: 40px;
+    margin: 50px 0;
+    box-shadow: 2px 2px 2px 2px var(--sombreado);
+    border-radius: 8px;
+}
+
+main .galeria-imagenes .imagenes {
+    display: grid;
+    grid-template-areas:
+        'img1 img2 img3 img4'
+        'img5 img6 img7 img8';
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 20px;
+}
+
+
+main .galeria-imagenes div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px var(--sombreado);
+    transition: transform 0.2s ease;
+}
+
+main .galeria-imagenes div img:hover {
+    transform: scale(1.05);
+}
+
+
+/* sección mapa */
+
+aside .localizacion {
+    padding: 40px;
+    box-shadow: 2px 2px 2px 2px var(--sombreado);
+    border-radius: 8px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: repeat(3 auto);
+    grid-gap: 20px;
+}
+
+
+/* sección ventajas */
+
+aside .ventajas {
+    margin: 50px 0;
+    padding: 40px;
+    box-shadow: 2px 2px 2px 2px var(--sombreado);
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: repeat(2 auto);
+    grid-gap: 20px;
+}
+
+aside .ventajas h3 {
+    text-align: center;
+}
+
+aside .ventajas .tarjeta1,
+aside .ventajas .tarjeta2 {
+    margin-right: 20px;
+}
+
+aside .ventajas .tarjeta1,
+aside .ventajas .tarjeta2,
+aside .ventajas .tarjeta3 {
+    line-height: 1.5;
+    padding: 20px;
+    height: 100%;
+    hyphens: auto;
+    border-radius: 8px;
+    background-color: #ffe3ef;
+    width: calc(100% / 3 - 20px);
+    float: left;
+}
+
+
+/* footer */
+
+footer {
+    margin: 0 -100px;
+    padding: 20px;
+    background-color: var(--footer);
+    border-top: var(--rosa-hover) solid 2px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+footer h3 {
+    font-weight: normal;
+    font-size: 25.6px;
+    color: white;
+}
+
+footer .iconos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+footer .iconos a {
+    font-size: 40px;
+    text-decoration: none;
+}
+
+footer i {
+    color: var(--rosa-fuerte);
+    transition: transform 0.25s ease;
+}
+
+footer i:hover {
+    transform: scale(1.2);
     color: white;
 }
 
 
+/* versión movil */
+
+@media screen and (max-width: 768px) {
+
+    /* tamaño fuente */
+
+    h1 {
+        font-size: 44px;
+    }
+
+    h2,
+    h4,
+    h3 {
+        color: var(--rosa-fuerte);
+        font-size: 28px;
+    }
+
+    td,
+    th,
+    h4 {
+        font-size: 13.6px;
+    }
+
+    h3 {
+        font-size: 16.8px;
+    }
+
+    p {
+        font-size: 12px;
+    }
 
 
+    body {
+        padding: 0 50px;
+    }
 
+
+    /* sección bienvenida */
+
+    main .reservas .reservas-grid {
+        flex-direction: column;
+    }
+
+
+    /* galería de imágenes */
+
+    main .galeria-imagenes .imagenes {
+        flex-direction: column;
+    }
+
+    main .galeria-imagenes .imagenes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagenes :nth-child(5),
+    .imagenes :nth-child(6),
+    .imagenes :nth-child(7),
+    .imagenes :nth-child(8) {
+        display: none;
+    }
+
+
+    /* tabla */
+
+    main .servicios {
+        padding: 10px;
+    }
+
+    main .servicios th {
+        font-size: 1.0em;
+    }
+
+    main .servicios td {
+        font-size: 0.8em;
+    }
+
+
+    /* tarjetas */
+
+    aside .ventajas .tarjetas {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    aside .ventajas .tarjeta1,
+    aside .ventajas .tarjeta2,
+    aside .ventajas .tarjeta3 {
+        width: 100%;
+    }
+
+    /* footer */
+
+    footer h3 {
+        font-weight: normal;
+        font-size: 18.6px;
+        color: white;
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="texto" />
+    <button onclick="agregarFila()">Añadir fila</button>
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>Contenido</th>
+                <th>Operación</th>
+            </tr>
+        </thead>
+        <tbody id="bodyTabla">
+            <tr>
+                <td id="fila1">Cecilia me ha dicho que este es el texto a canificar</td>
+                <td><button onclick="toCani('fila1')">Caniar</button></td>
+            </tr>
+        </tbody>
+        </tr>
+    </table>
+    <script>
+        /* Usted deberá añadir el código JavaScript necesario para implementar las siguientes funcionalidades:
+
+    • Funcionalidad del Botón "Añadir fila": Implemente la función agregarFila de modo que, al pulsarse, tome el contenido del campo de texto y lo añada como una nueva fila a la tabla, incluyendo su respectivo botón de "Caniar" que apunte a la nueva celda. Toda la estructura de la página debe generarse desde JavaScript utilizando métodos como document.createElement() y appendChild(). (1 pto) 
+
+    • Evento Mouseover: Implemente la lógica para que, al pasar el ratón por encima de cualquier celda de la tabla, el color de fondo de esa celda cambie (por ejemplo, a gris claro), volviendo a la normalidad al retirar el ratón. (1 pto)
+
+    • Función de Transformación: Cree la función toCani(cadena). Esta función debe recibir una cadena de texto y devolverla transformada bajo las siguientes reglas "Cani": (2 ptos)
+        ◦ Alternancia: Alternar el uso de MAYÚSCULAS y minúsculas.
+        ◦ Sustituciones fonéticas: Sustituir la letra C por la K. Se valorará el uso de expresiones regulares para sustituir las secuencias "ca", "co", "cu" por "ka", "ko", "ku" (pero no "ce", "ci").
+        ◦ Sustituciones compuestas: Sustituir todas las ocurrencias de "qu" por "k" y todas las "ch" por "x".
+        ◦ Añadido final: Añadir tres letras H al final de la cadena resultante.
+        ◦ Por ejemplo, si le pasamos a la función la cadena "una cadena cani es como esta" obtendremos "UnA KaDeNa kAnI Es kOmO EsTaHHH".  */
+        function agregarFila() {
+            const texto = document.getElementById('texto').value;
+            const tablaBody = document.getElementById('bodyTabla');
+
+            const nuevaFila = document.createElement('tr');
+
+            const celdaContenido = document.createElement('td');
+            celdaContenido.textContent = texto;
+            celdaContenido.addEventListener('mouseover', function () {
+                this.style.backgroundColor = 'lightgray';
+            });
+            celdaContenido.addEventListener('mouseout', function () {
+                this.style.backgroundColor = '';
+            });
+
+            const celdaOperacion = document.createElement('td');
+            const botonCaniar = document.createElement('button');
+            botonCaniar.textContent = 'Caniar';
+            botonCaniar.onclick = function () {
+                celdaContenido.textContent = toCani(celdaContenido.textContent);
+            };
+            celdaOperacion.appendChild(botonCaniar);
+
+            nuevaFila.appendChild(celdaContenido);
+            nuevaFila.appendChild(celdaOperacion);
+
+            tablaBody.appendChild(nuevaFila);
+        }
+
+        function toCani(cadena) {
+            // Sustituciones fonéticas y compuestas
+            let resultado = cadena
+                .replace(/ch/gi, 'x')
+                .replace(/qu/gi, 'k')
+                .replace(/ca/gi, 'ka')
+                .replace(/co/gi, 'ko')
+                .replace(/cu/gi, 'ku')
+                .replace(/c(?![ei])/gi, 'k');
+
+            // Alternancia de mayúsculas y minúsculas
+            let alternado = '';
+            for (let i = 0; i < resultado.length; i++) {
+                alternado += (i % 2 === 0) ? resultado[i].toUpperCase() : resultado[i].toLowerCase();
+            }
+
+            // Añadir tres H al final
+            alternado += 'HHH';
+
+            return alternado;
+        }
+
+        
+    </script>
+</body>
+
+</html>

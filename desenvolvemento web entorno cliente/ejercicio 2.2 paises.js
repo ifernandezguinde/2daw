@@ -40,27 +40,34 @@ function filtrarPorCriterios(array, criterios) {
 }
 
 
+
 function estadisticasContinentes(a1) {
-    return a1.reduce( (ganador, pais) => {
+    return a1.reduce( (valor, pais) => {
         const propiedad = pais.continente;
-        if (!valor[proiedad]){
+        if (!valor[propiedad]){
             valor[propiedad] = {
                 total: 0,
                 monedas: [],
                 paises: []
             };
         }
-        valor[proiedad].total++;
+        valor[propiedad].total++;
         if (valor[propiedad].monedas.includes(pais.moneda)){
-            valor[proiedad].monedas.push(pais.moneda);
+            valor[propiedad].monedas.push(pais.moneda);
         }
         if (valor[propiedad].paises.includes(pais.nombre)){
-            valor[proiedad].paises.push(pais.nombre);
+            valor[propiedad].paises.push(pais.nombre);
         }
 
         return valor;
     }, {} 
     );
+}
+
+
+function informeCapitales(a1) {
+    return a1.filter(pais => pais.capital.length > 4).sort((paisA, paisB) => paisA.nombre.localeCompare(paisB.nombre))
+    .map(pais => `La capital de ${pais.nombre} es ${pais.capital} y tiene ${pais.capital.length} letras.`);
 }
 
 
@@ -74,4 +81,7 @@ console.log( filtrarPorCriterios(PAISES, criterios) );
 console.log("___");
 
 console.log( estadisticasContinentes(PAISES) );
+console.log("___");
+
+console.log( informeCapitales(PAISES) );
 console.log("___");

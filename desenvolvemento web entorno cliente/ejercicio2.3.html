@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="formulario-ubicacion">
+        <label for="select-provincia">Provincia:</label>
+        <select id="select-provincia">
+            <option value="" selected disabled>Selecciona una provincia</option>
+        </select>
+
+        <label for="select-municipio">Municipio:</label>
+        <select id="select-municipio" disabled>
+            <option value="" selected disabled>Primero elige provincia</option>
+        </select>
+
+        <div id="resultado-ine">
+            <p>Código INE: <span id="codigo-ine">-</span></p>
+        </div>
+    </form>
+
+</body>
+
+<script>
+
+
+const datos = {
+    "Madrid": [
+        { nombre: "Madrid", ine: "28079" },
+        { nombre: "Alcalá de Henares", ine: "28005" },
+        { nombre: "Móstoles", ine: "28092" }
+    ],
+    "Barcelona": [
+        { nombre: "Barcelona", ine: "08019" },
+        { nombre: "Badalona", ine: "08015" },
+        { nombre: "Sabadell", ine: "08187" }
+    ],
+    "Sevilla": [
+        { nombre: "Sevilla", ine: "41091" },
+        { nombre: "Dos Hermanas", ine: "41038" },
+        { nombre: "Alcalá de Guadaíra", ine: "41004" }
+    ]
+};
+
+const selProv = document.getElementById('select-provincia');
+const selMun = document.getElementById('select-municipio');
+const spanIne = document.getElementById('codigo-ine');
+
+
+for (const provincia in datos){
+    const opcion = document.createElement('option');
+    opcion.value = provincia;
+    opcion.textContent = provincia;
+    selProv.appendChild(opcion);
+}
+
+</script>
+
+</html>

@@ -30,35 +30,65 @@
 <script>
 
 
-const datos = {
-    "Madrid": [
-        { nombre: "Madrid", ine: "28079" },
-        { nombre: "Alcalá de Henares", ine: "28005" },
-        { nombre: "Móstoles", ine: "28092" }
-    ],
-    "Barcelona": [
-        { nombre: "Barcelona", ine: "08019" },
-        { nombre: "Badalona", ine: "08015" },
-        { nombre: "Sabadell", ine: "08187" }
-    ],
-    "Sevilla": [
-        { nombre: "Sevilla", ine: "41091" },
-        { nombre: "Dos Hermanas", ine: "41038" },
-        { nombre: "Alcalá de Guadaíra", ine: "41004" }
-    ]
-};
+    const datos = {
+        "Madrid": [
+            { nombre: "Madrid", ine: "28079" },
+            { nombre: "Alcalá de Henares", ine: "28005" },
+            { nombre: "Móstoles", ine: "28092" }
+        ],
+        "Barcelona": [
+            { nombre: "Barcelona", ine: "08019" },
+            { nombre: "Badalona", ine: "08015" },
+            { nombre: "Sabadell", ine: "08187" }
+        ],
+        "Sevilla": [
+            { nombre: "Sevilla", ine: "41091" },
+            { nombre: "Dos Hermanas", ine: "41038" },
+            { nombre: "Alcalá de Guadaíra", ine: "41004" }
+        ]
+    };
 
-const selProv = document.getElementById('select-provincia');
-const selMun = document.getElementById('select-municipio');
-const spanIne = document.getElementById('codigo-ine');
+    const selProv = document.getElementById('select-provincia');
+    const selMun = document.getElementById('select-municipio');
+    const spanIne = document.getElementById('codigo-ine');
 
 
-for (const provincia in datos){
-    const opcion = document.createElement('option');
-    opcion.value = provincia;
-    opcion.textContent = provincia;
-    selProv.appendChild(opcion);
-}
+    for (const provincia in datos) {
+        const opcion = document.createElement('option');
+        opcion.value = provincia;
+        opcion.textContent = provincia;
+        selProv.appendChild(opcion);
+    }
+
+
+    selProv.addEventListener('change', function () {
+        selMun.textContent = '';
+        const opcionPorDefecto = document.createElement('option');
+        selMun.textContent = 'Primero elige provincia';
+        opcionPorDefecto.disabled = true;
+        opcionPorDefecto.selected = true;
+        opcionPorDefecto.value = '';
+        opcionPorDefecto.textContent = 'Selecciona un municipio';
+        selMun.appendChild(opcionPorDefecto);
+        spanIne.textContent = '-';
+
+        selMun.disabled = false;
+        const provinciaSel = this.value;
+        const listaMunicipios = datos[provinciaSel];
+
+        for (const indice in listaMunicipios) {
+            const municipio = listaMunicipios[indice];
+            const opcion = document.createElement('option');
+            opcion.value = municipio.ine;
+            opcion.textContent = municipio.nombre;
+            selMun.appendChild(opcion);
+        }
+    });
+
+
+    selMun.addEventListener('change', function () {
+        spanIne.textContent = this.value;
+    });
 
 </script>
 

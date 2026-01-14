@@ -7,56 +7,44 @@
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <title>ejercicio bootstrap</title>
     </head>
-
+    
     <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container">
                     <a href="#" class="navbar-brand">Logotipo</a>
-
+                
                     <!-- botón desplegable movil -->
-                    <button
-                        class="navbar-toggler"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#menu"
-                        aria-controls="menu"
-                        aria-expanded="false"
-                        aria-label="Mostrar / Ocultar menu"
-                    >
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu"
+                        aria-expanded="false" aria-label="Mostrar / Ocultar menu">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
+                
                     <!-- menú de navegación -->
                     <div class="collapse navbar-collapse" id="menu">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
-
+                        
                             <!-- dropdown -->
-                                <li class="nav-item dropdown">
-                                    <a 
-                                        href="#"
-                                        class="nav-link dropdown-toggle"
-                                        role="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                        id="dropdown-menu"
-                                    >
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false" id="dropdown-menu">
                                     Productos
-                                    </a>
-
-                                    <ul class="dropdown-menu" aria-labelledby="dropdown-menu">
-                                        <li><a href="#" class="dropdown-item">Computadoras</a></li>
-                                        <li><a href="#" class="dropdown-item">Laptops</a></li>
-                                        <li><a href="#" class="dropdown-item">Smartphones</a></li>
-                                        <li><a href="#" class="dropdown-item">Drones</a></li>
-                                        <li><a href="#" class="dropdown-item">Accesorios</a></li>
-                                    </ul>
-                                </li>
+                                </a>
+                            
+                                <ul class="dropdown-menu" aria-labelledby="dropdown-menu">
+                                    <li><a href="#" class="dropdown-item">Computadoras</a></li>
+                                    <li><a href="#" class="dropdown-item">Laptops</a></li>
+                                    <li><a href="#" class="dropdown-item">Smartphones</a></li>
+                                    <li><a href="#" class="dropdown-item">Drones</a></li>
+                                    <li><a href="#" class="dropdown-item">Accesorios</a></li>
+                                </ul>
+                            </li>
                             <!-- -------- -->
-
-                            <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                        
+                            <li class="nav-item"><a href="#" class="nav-link" id="contacto">Contacto</a></li>
                         </ul>
-
+                    
                         <form action="" class="d-flex">
                             <input type="search" class="form-control me-2" placeholder="Buscar" aria-label="Buscar">
                             <button class="btn btn-primary" type="button">Buscar</button>
@@ -65,8 +53,10 @@
                 </div>
             </nav>
         </header>
+    
+        <main class="container my-4">
 
-        <div class="container">
+            <!-- carrusel -->
             <div class="row">
                 <div class="col">
                     <div class="carousel slide carousel-fade" id="mi-carousel" data-bs-ride="carousel">
@@ -81,60 +71,36 @@
                                 <img class="d-block w-100" src="./img/s3.jpg" alt="">
                             </div>
                         </div>
-
+                    
                         <!-- Controles -->
-                        <button
-                            class="carousel-control-prev"
-                            type="button"
-                            data-bs-target="#mi-carousel"
-                            data-bs-slide="prev"
-                        >
+                        <button class="carousel-control-prev" type="button" data-bs-target="#mi-carousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Anterior</span>
                         </button>
-                        
-                        <button
-                            class="carousel-control-next"
-                            type="button"
-                            data-bs-target="#mi-carousel"
-                            data-bs-slide="next"
-                        >
+                    
+                        <button class="carousel-control-next" type="button" data-bs-target="#mi-carousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Siguiente</span>
                         </button>
-
+                    
                         <!-- Indicadores -->
                         <div class="carousel-indicators">
-                            <button
-                                class="active"
-                                type="button"
-                                data-bs-target="#mi-carousel"
-                                data-bs-slide-to="0"
-                                aria-label="Slide 1"
-                            ></button>
-
-                            <button
-                                class=""
-                                type="button"
-                                data-bs-target="#mi-carousel"
-                                data-bs-slide-to="1"
-                                aria-label="Slide 2"
-                            ></button>
-
-                            <button
-                                class=""
-                                type="button"
-                                data-bs-target="#mi-carousel"
-                                data-bs-slide-to="2"
-                                aria-label="Slide 3"
-                            ></button>
+                            <button class="active" type="button" data-bs-target="#mi-carousel" data-bs-slide-to="0"
+                                aria-label="Slide 1"></button>
+                        
+                            <button class="" type="button" data-bs-target="#mi-carousel" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        
+                            <button class="" type="button" data-bs-target="#mi-carousel" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <main class="container my-4">
+            <!-- galería -->
             <div class="row py-5">
                 <div class="col">
                     <div class="border-bottom">
@@ -142,15 +108,15 @@
                     </div>
                 </div>
             </div>
-            
+        
             <!-- Cards -->
-            <div class="row row-cols-2 row-cols-md-4 g-4">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 pb-4 border-bottom">
                 <div class="col">
                     <div class="card h-100">
                         <img src="./img/1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title 1</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h3 class="card-title">iPhone</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet. consectetur adipisicing elit.</p>
                             <a href="#" class="btn btn-primary">Comprar</a>
                             <a href="#" class="btn btn-secondary">Detalles</a>
                         </div>
@@ -160,8 +126,10 @@
                     <div class="card h-100">
                         <img src="./img/2.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title 2</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h3 class="card-title">Mac</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet. consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                            <a href="#" class="btn btn-secondary">Detalles</a>
                         </div>
                     </div>
                 </div>
@@ -169,8 +137,10 @@
                     <div class="card h-100">
                         <img src="./img/3.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title 3</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h3 class="card-title">Canon</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet. consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                            <a href="#" class="btn btn-secondary">Detalles</a>
                         </div>
                     </div>
                 </div>
@@ -178,18 +148,22 @@
                     <div class="card h-100">
                         <img src="./img/4.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title 3</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h3 class="card-title">Apple Watch</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet. consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                            <a href="#" class="btn btn-secondary">Detalles</a>
                         </div>
                     </div>
                 </div>
-
+            
                 <div class="col">
                     <div class="card h-100">
                         <img src="./img/5.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title 1</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h3 class="card-title">Keyboard</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet. consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                            <a href="#" class="btn btn-secondary">Detalles</a>
                         </div>
                     </div>
                 </div>
@@ -197,8 +171,10 @@
                     <div class="card h-100">
                         <img src="./img/6.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title 2</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h3 class="card-title">iPad</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet. consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                            <a href="#" class="btn btn-secondary">Detalles</a>
                         </div>
                     </div>
                 </div>
@@ -206,8 +182,10 @@
                     <div class="card h-100">
                         <img src="./img/7.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title 3</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h3 class="card-title">Macbook</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet. consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                            <a href="#" class="btn btn-secondary">Detalles</a>
                         </div>
                     </div>
                 </div>
@@ -215,14 +193,39 @@
                     <div class="card h-100">
                         <img src="./img/8.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title 3</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h3 class="card-title">Cameras</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet. consectetur adipisicing elit.</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                            <a href="#" class="btn btn-secondary">Detalles</a>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-
+    
+        <footer class="py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                
+                    <!-- Izquierda -->
+                    <div class="col-8 text-start">
+                        <div class="pb-2">IES Pazo da Merce</div>
+                    
+                        <div class="ps-2">
+                            <a href="#top" class="me-3 focus-ring py-1 px-2 rounded-2">Acerca de</a>
+                            <a href="#top" class="focus-ring py-1 px-2 rounded-2">Contacto</a>
+                        </div>
+                    </div>
+                
+                    <!-- Derecha -->
+                    <div class="col-4 text-end pe-4">
+                        <a href="#top" class="focus-ring py-1 px-2 rounded-2">Subir en Página</a>
+                    </div>
+                
+                </div>
+            </div>
+        </footer>
+    
         <script src="./js/bootstrap.bundle.min.js"></script>
     </body>
 

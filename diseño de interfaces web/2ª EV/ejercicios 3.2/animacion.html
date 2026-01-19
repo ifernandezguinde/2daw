@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            font-family: 'Arial';
+            background-color: lightblue;
+            margin: 20px;
+            padding: 5px;
+            text-align: center;
+            font-weight: bolder;
+            width: 200px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parrafo {
+            animation: 5s parrafo 1;
+        }
+
+        @keyframes parrafo {
+            0% {transform: translateX(100vw);}
+
+            100% {transform: translate(0);}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parrafo">
+        <p>Párrafo que se desliza</p>
+    </div>
+</body>
+
+</html>

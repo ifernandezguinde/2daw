@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .rectangulo1,
+        .rectangulo2 {
+            margin: 50px;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+        }
+
+        .rectangulo1:hover,
+        .rectangulo2:hover {
+            animation-duration: 0.7s;
+            animation-name: escala;
+        }
+
+
+
+        @keyframes escala {
+            0% {
+                width: 30px;
+                height: 30px;
+                background-color: red;
+            }
+
+            100% {
+                width: 60px;
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rectangulo1"></div>
+    <div class="rectangulo2"></div>
+</body>
+
+</html>
